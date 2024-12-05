@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link href="img/pokedex.png" rel="icon"/>
+    <title>PokeApi</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="index.html"><img class="nav-logo" src="img/pokedex.png"/></a>
+            <h1>PokeApi</h1>
+        </div>
+        <ul class="nav-list">
+            <a href="index.html"><li>Inicio</li></a>
+            <a href="generation.html"><li>Generaciones</li></a>
+            <a href="movement.html"><li>Movimientos</li></a>
+            <a href="types.html"><li>Tipos</li></a>
+            <a href="login.html"><li><svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M3 12h6"></path><path d="M15 12h6"></path></svg></li></a>
+        </ul>
+    </nav>
+    <div class="pokemons-aside">
+        <aside class="generation">
+            <button class="generation-button" value="1">1ª Generación</button>
+            <button class="generation-button" value="2">2ª Generación</button>
+            <button class="generation-button" value="3">3ª Generación</button>
+            <button class="generation-button" value="4">4ª Generación</button>
+            <button class="generation-button" value="5">5ª Generación</button>
+            <button class="generation-button" value="6">6ª Generación</button>
+            <button class="generation-button" value="7">7ª Generación</button>
+            <button class="generation-button" value="8">8ª Generación</button>
+            <button class="generation-button" value="9">9ª Generación</button>
+        </aside>
+
+        <div class="pokemons" id="pokemons"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
