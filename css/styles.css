@@ -191,7 +191,7 @@ nav div{
     justify-content: space-between;
     margin-left: auto; 
     width: 80%;
-    background-color: rgba(46, 46, 46, 0.5);
+    background-color: rgba(46, 46, 46, 0.9);
     border-radius: 10px;
 }
 
@@ -311,7 +311,7 @@ nav div{
 
 .ini-main, .type-main, .movement-main{
     text-align: justify;
-    background-color: rgba(46, 46, 46, 0.7);
+    background-color: rgba(46, 46, 46, 0.9);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -509,25 +509,60 @@ nav div{
     justify-content: center;
 }
 
-.pokeTable{
+.pokeTable {
     border: 1px solid whitesmoke;
     background-color: rgba(26, 26, 26, 0.83);
-    .pokemonImg{
-        width: 300px;
-        height: 300px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pokeTable .pokemonImg {
+    width: 300px;
+    height: 300px;
+}
+
+.pokeTable th {
+    text-align: center;
+}
+
+.pokeTable tr, .pokeTable td, .pokeTable th {
+    border: 1px solid whitesmoke;
+    padding: 50px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .pokeTable {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
-    th{
-       text-align: center; 
+
+    .pokeTable .pokemonImg {
+        width: 200px;
+        height: 200px;
     }
-    tr, td, th{
-        border: 1px solid whitesmoke;
-        padding: 50px;
+
+    .pokeTable tr, .pokeTable td, .pokeTable th {
+        padding: 20px;
     }
 }
 
-.pokeAudio{
-    
+@media (max-width: 480px) {
+    .pokeTable {
+        font-size: 0.8rem;
+    }
+
+    .pokeTable .pokemonImg {
+        width: 150px;
+        height: 150px;
+    }
+
+    .pokeTable tr, .pokeTable td, .pokeTable th {
+        padding: 10px;
+    }
 }
+
 
 /* PARTE DEL FOOTER */
 
