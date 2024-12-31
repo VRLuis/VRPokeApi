@@ -12,9 +12,8 @@ body{
     background-image: url("../img/fondoPokemon.jpg");
     color: whitesmoke;
     font-family: system-ui;
-    padding: 100px 30px;
-    min-height: 100vh;
     margin: 0;
+    overflow-x: hidden;
     background-repeat: repeat-y;
     background-position: center top;
     background-attachment: fixed;
@@ -23,6 +22,8 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+
 
 ::-webkit-scrollbar {
     width: 20px;
@@ -42,12 +43,35 @@ body{
     border-radius: 6px;
 }
 
+header{
+    display: flex;
+    align-items: center;
+    background-color: #1C1C1C;
+    padding: 0px 50px;
+    
+    div{
+        width: 40%;
+    }
+    h1{
+        width: 60%;
+        font-size: 80px;
+    }
+    @media (max-width: 1000px){
+        div{
+            width: fit-content;
+        }
+        h1{
+            width: fit-content;
+        }
+    }
+}
+
 nav{
-    position: fixed;
+    position: sticky;
     background-color: rgba(46, 46, 46, 0.83);
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px 0px;
     width: 100%;
     left: 0;
     top: 0;
@@ -55,24 +79,17 @@ nav{
     height: fit-content;
 }
 
-nav div{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 500px;
+.header-logo{
+    width: 100px;
+    height: 100px;
 }
 
-.nav-logo{
-    width: 60px;
-    height: 60px;
-}
-
-.nav-logo:hover{
+.header-logo:hover{
     transition: 0.3s;
     scale: 1.2;
 }
 
-.nav-logo:not(:hover){
+.header-logo:not(:hover){
     transition: 0.3s;
     scale: 1;
 }
@@ -80,9 +97,10 @@ nav div{
 .nav-list{
     display: flex;
     align-items: center;
-    list-style-type: none;
-    margin-right: 100px;
+    justify-content: space-around;
     flex-wrap: wrap;
+    list-style-type: none;
+    width: 100%;
 }
 
 .nav-list li{
@@ -115,74 +133,6 @@ nav div{
     scale: 1.1;
 }
 
-/* REGISTER.PHP */
-
-.register-section{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    margin: 150px 0px;
-}
-
-.register-form{
-    background-color: rgb(66, 64, 64);
-    width: 30%;
-    height: fit-content;
-    text-align: center;
-    scale: 1.3;
-    padding: 10px 50px;
-    box-shadow: 10px 10px 50px 10px #eeeeee;
-    border-radius: 5px;
-}
-
-.div-form{
-    text-align: center;
-    margin-top: 50px;
-}
-
-.div-form label{
-    font-size: large;
-}
-
-.div-form input{
-    width: 70%;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    padding: 10px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    border-bottom: whitesmoke 2px solid;
-    color: whitesmoke;
-}
-
-.div-form input:hover{
-    scale: 1.1;
-    padding: 10px;
-    transition: 0.3s;
-}
-
-.div-form input:focus{
-    padding-bottom: 15px;
-    transition: 0.2s;
-}
-
-.div-form input:not(:focus){
-    padding-bottom: 5px;
-    transition: 0.2s;
-}
-
-.div-form input[type="submit"]{
-    padding: 30px 0px;
-    border: 2px solid whitesmoke;
-    font-size: 20px;
-    background-color: #222;
-    &:hover{
-        filter: brightness(2);
-    }
-}
-
 /* Zona de pokemons iniciales */
 
 .pokemons{
@@ -193,6 +143,8 @@ nav div{
     width: 80%;
     background-color: rgba(46, 46, 46, 0.9);
     border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
 }
 
 .pokemonCard{
@@ -293,31 +245,28 @@ nav div{
 
 .introVideo{
     width: 100%;
-    max-width: 1500px;
+    max-width: 1410px;
+    height: 800px;
     margin: 100px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.introVideo video{
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    border-radius: 30px;
 }
 
 
 .ini-main, .type-main, .movement-main{
+    padding: 100px 10px;
+    margin: 80px;
     text-align: justify;
     background-color: rgba(46, 46, 46, 0.9);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    padding: 50px;
     h1{
-        font-size: 6rem;
+        font-size: 4rem;
         text-align: center;
     }
     h2{
@@ -333,52 +282,32 @@ nav div{
         text-align: center;
         margin: 300px 0px;
     }
-    .generation-section{
-        margin: 100px;
-        .border-img{
-            border: 1px solid rgb(119, 119, 119);
-            overflow: hidden;
-            border-radius: 20px;
-            width: fit-content;
-            height: fit-content;
-        }
-        img{
-            scale: 1;
-            transition: 0.5s;
-            width: 1000px;
-            height: 500px;
-            &:hover{
-                scale: 1.05;
-                transition: 0.5s;
-            }
-        }
-        div{
-            display: flex;
-        }
-        p{
-            margin: 0px 20px;
-            text-align: justify;
-            width: 1100px;
-            font-size: 26px;
-            height: fit-content;
-            span{
-                font-weight: bolder;
+    
+    .welcome-section{
+        margin: 20px
+        
+    }
+
+    @media (max-width: 1000px){
+        .generation-section, .types-section, .movements-section{
+            div{
+                display: flex;
+                flex-wrap: wrap;
+                p{
+                    margin-top: 20px;
+                }
             }
         }
     }
 
-    .types-section, .movements-section{
-        margin: 100px;
-        margin-top: 500px;
-        display: flexbox;
-        flex-direction: column;
+    .generation-section, .types-section, .movements-section{
+        margin: 100px 20px;
         .border-img{
             border: 1px solid rgb(119, 119, 119);
             overflow: hidden;
             border-radius: 20px;
             width: fit-content;
             height: fit-content;
-            background-color: #1C1C1C;
         }
         img{
             scale: 1;
@@ -531,7 +460,7 @@ nav div{
     text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
     .pokeTable {
         display: block;
         overflow-x: auto;
@@ -545,6 +474,14 @@ nav div{
 
     .pokeTable tr, .pokeTable td, .pokeTable th {
         padding: 20px;
+    }
+    .search-zone{
+        flex-wrap: wrap;
+        .search{
+            width: 60%;
+            height: 100px;
+            margin-top: 20px;
+        }
     }
 }
 

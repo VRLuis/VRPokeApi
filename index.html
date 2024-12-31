@@ -5,33 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css"/>
     <link href="img/pokedex.png" rel="icon"/>
-    <title>PokeApi</title>
+    <title>VRPokeApi</title>
 </head>
 <body>
+    <header>
+            <div><a href="index.html"><img class="header-logo" src="img/pokedex.png"/></a></div>
+            <h1>VRPokeApi</h1>
+    </header>
     <nav>
-        <div>
-            <a href="index.html"><img class="nav-logo" src="img/pokedex.png"/></a>
-            <h1>PokeApi</h1>
-        </div>
         <ul class="nav-list">
             <a href="index.html"><li>Inicio</li></a>
             <a href="generation.html"><li>Generaciones</li></a>
             <a href="movement.html"><li>Movimientos</li></a>
             <a href="types.html"><li>Tipos</li></a>
-            <a href="login.html"><li><svg xmlns="http://www.w3.org/2000/svg" x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M3 12h6"></path><path d="M15 12h6"></path></svg></li></a>
         </ul>
     </nav>
     <main class="ini-main">
-        <h1>¡Bienvenido a la PokeApi de Luis Villar Roldán!</h1>
+        <h1>¡Bienvenido a la VRPokeApi!</h1>
         <br>
 
-        <section>
+        <section class="welcome-section">
             <h2>¿Qué encontrará en esta web?</h2>
             <p>En esta web encontrará información sobre pokemons de distintas generaciones, 
                 esta aplicación utiliza la PokeApi oficial. Por lo que la información que encontrarás es oficial y no estará modificada de ninguna manera</p>
-            <video class="introVideo" controls autoplay>
-                <source  src="./video/Pokémon - Opening [4K] Castellano (Con Letra).mp4"/>
-            </video>
+                <iframe class="introVideo" width="560" height="315" src="https://www.youtube.com/embed/R3Y525VJ4ZI?si=GWgqAp_oPLjG-RCG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
 
         <div class="interlude">
@@ -88,11 +85,9 @@
                     Los pokemons se mostrarán dependiendo del tipo que se seleccione, se mostrarán en el orden que establece la PokeApi oficial. Dentro de los tipos.
                 </p>
             </div>
-        </section>
-
-        
-        
+        </section>      
     </main>
+
     <footer>
         <section>
             <h2>Contacto</h2>
